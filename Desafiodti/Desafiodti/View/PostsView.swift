@@ -9,16 +9,9 @@ import SwiftUI
 
 struct PostsView: View {
 
+    @StateObject var postsViewModel = PostsViewModel()
     let barTitle = "Blog App"
     private let screenTitle = "Lista de Posts"
-
-    let posts = [
-        Post(title: "titulo 1", date: Text(Date.now, style: .date), details: "detalhes 1"),
-        Post(title: "titulo 2", date: Text(Date.now, style: .date), details: "detalhes 2"),
-        Post(title: "titulo 3", date: Text(Date.now, style: .date), details: "detalhes 3"),
-        Post(title: "titulo 4", date: Text(Date.now, style: .date), details: "detalhes 4"),
-        Post(title: "titulo 5", date: Text(Date.now, style: .date), details: "detalhes 5")
-    ]
 
     var body: some View {
         NavigationView {
@@ -31,7 +24,7 @@ struct PostsView: View {
                     Text(screenTitle)
 
                     List {
-                        ForEach(posts, id: \.id) { post in
+                        ForEach(postsViewModel.getPosts(), id: \.id) { post in
                             NavigationLink {
                                 DetailsView(post: post)
                             } label: {

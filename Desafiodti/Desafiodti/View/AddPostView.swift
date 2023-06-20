@@ -10,7 +10,8 @@ import SwiftUI
 struct AddPostView: View {
 
     @State private var title: String = ""
-    @State private var description: String = ""
+    @State private var detail: String = ""
+    @StateObject var addPostViewModel = AddPostViewModel()
 
     private let barTitle = PostsView().barTitle
     private let screenTitle = "Adicionar Post"
@@ -34,7 +35,7 @@ struct AddPostView: View {
                                     .stroke(Color("dti-roxo"), lineWidth: 1)
                             )
 
-                        TextField("Descrição", text: $description, axis: .vertical)
+                        TextField("Escreva aqui seu post", text: $detail, axis: .vertical)
                             .padding(6)
                             .lineLimit(10, reservesSpace: true)
                             .overlay(
@@ -48,7 +49,7 @@ struct AddPostView: View {
                     Spacer()
 
                     Button {
-                        //TODO: ação para adicionar
+                        addPostViewModel.addNew(postTitle: title, postDetail: detail)
                     } label: {
                         Image(systemName: "plus.rectangle.fill")
                             .font(.system(size: 35))
@@ -57,7 +58,6 @@ struct AddPostView: View {
                     .padding([.top], 2)
                 }
                 .navigationBarTitle(barTitle, displayMode: .inline)
-
             }
         }
     }

@@ -2,7 +2,7 @@
 //  DesafiodtiUITestsLaunchTests.swift
 //  DesafiodtiUITests
 //
-//  Created by Ana Pedroso on 20/06/23.
+//  Created by Carol Bezerra on 20/06/23.
 //
 
 import XCTest

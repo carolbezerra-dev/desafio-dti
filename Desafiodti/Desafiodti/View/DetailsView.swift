@@ -72,7 +72,6 @@ struct DetailsView_Previews: PreviewProvider {
             post:
                 Post(
                     title: "DetailsView",
-                    date: Text(Date.now, style: .date),
                     details: "DetailsView_Preview"
                 )
         )

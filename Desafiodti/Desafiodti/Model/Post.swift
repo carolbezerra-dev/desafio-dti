@@ -11,6 +11,6 @@ import SwiftUI
 struct Post {
     let id = UUID()
     let title: String
-    let date: Text
+    let date = Text(Date.now, style: .date)
     let details: String
 }

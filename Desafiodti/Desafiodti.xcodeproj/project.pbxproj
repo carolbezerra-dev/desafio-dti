@@ -11,12 +11,14 @@
 		876C7DEA2A4181E900EDE6DB /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7DE92A4181E900EDE6DB /* PostsView.swift */; };
 		876C7DEC2A4181ED00EDE6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876C7DEB2A4181ED00EDE6DB /* Assets.xcassets */; };
 		876C7DEF2A4181ED00EDE6DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876C7DEE2A4181ED00EDE6DB /* Preview Assets.xcassets */; };
-		876C7DF92A4181EE00EDE6DB /* DesafiodtiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7DF82A4181EE00EDE6DB /* DesafiodtiTests.swift */; };
+		876C7DF92A4181EE00EDE6DB /* AddPostViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7DF82A4181EE00EDE6DB /* AddPostViewModelTests.swift */; };
 		876C7E032A4181EE00EDE6DB /* DesafiodtiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E022A4181EE00EDE6DB /* DesafiodtiUITests.swift */; };
 		876C7E052A4181EE00EDE6DB /* DesafiodtiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E042A4181EE00EDE6DB /* DesafiodtiUITestsLaunchTests.swift */; };
 		876C7E132A4187FB00EDE6DB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E122A4187FB00EDE6DB /* Post.swift */; };
 		876C7E162A418DE900EDE6DB /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E152A418DE900EDE6DB /* DetailsView.swift */; };
 		876C7E182A4198E800EDE6DB /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E172A4198E800EDE6DB /* AddPostView.swift */; };
+		876C7E1D2A42080200EDE6DB /* AddPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E1C2A42080200EDE6DB /* AddPostViewModel.swift */; };
+		876C7E1F2A4211CB00EDE6DB /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E1E2A4211CB00EDE6DB /* PostsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +45,15 @@
 		876C7DEB2A4181ED00EDE6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		876C7DEE2A4181ED00EDE6DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		876C7DF42A4181EE00EDE6DB /* DesafiodtiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafiodtiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		876C7DF82A4181EE00EDE6DB /* DesafiodtiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiodtiTests.swift; sourceTree = "<group>"; };
+		876C7DF82A4181EE00EDE6DB /* AddPostViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewModelTests.swift; sourceTree = "<group>"; };
 		876C7DFE2A4181EE00EDE6DB /* DesafiodtiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafiodtiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		876C7E022A4181EE00EDE6DB /* DesafiodtiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiodtiUITests.swift; sourceTree = "<group>"; };
 		876C7E042A4181EE00EDE6DB /* DesafiodtiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiodtiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		876C7E122A4187FB00EDE6DB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		876C7E152A418DE900EDE6DB /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		876C7E172A4198E800EDE6DB /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		876C7E1C2A42080200EDE6DB /* AddPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewModel.swift; sourceTree = "<group>"; };
+		876C7E1E2A4211CB00EDE6DB /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				876C7DE72A4181E900EDE6DB /* DesafiodtiApp.swift */,
 				876C7E142A4187FE00EDE6DB /* Model */,
 				876C7E112A41828200EDE6DB /* View */,
+				876C7E1B2A42075D00EDE6DB /* ViewModel */,
 				876C7DEB2A4181ED00EDE6DB /* Assets.xcassets */,
 				876C7DED2A4181ED00EDE6DB /* Preview Content */,
 			);
@@ -120,7 +125,7 @@
 		876C7DF72A4181EE00EDE6DB /* DesafiodtiTests */ = {
 			isa = PBXGroup;
 			children = (
-				876C7DF82A4181EE00EDE6DB /* DesafiodtiTests.swift */,
+				876C7DF82A4181EE00EDE6DB /* AddPostViewModelTests.swift */,
 			);
 			path = DesafiodtiTests;
 			sourceTree = "<group>";
@@ -150,6 +155,15 @@
 				876C7E122A4187FB00EDE6DB /* Post.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		876C7E1B2A42075D00EDE6DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				876C7E1E2A4211CB00EDE6DB /* PostsViewModel.swift */,
+				876C7E1C2A42080200EDE6DB /* AddPostViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +300,9 @@
 				876C7E162A418DE900EDE6DB /* DetailsView.swift in Sources */,
 				876C7DEA2A4181E900EDE6DB /* PostsView.swift in Sources */,
 				876C7DE82A4181E900EDE6DB /* DesafiodtiApp.swift in Sources */,
+				876C7E1D2A42080200EDE6DB /* AddPostViewModel.swift in Sources */,
 				876C7E182A4198E800EDE6DB /* AddPostView.swift in Sources */,
+				876C7E1F2A4211CB00EDE6DB /* PostsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				876C7DF92A4181EE00EDE6DB /* DesafiodtiTests.swift in Sources */,
+				876C7DF92A4181EE00EDE6DB /* AddPostViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
