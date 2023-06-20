@@ -10,6 +10,7 @@ import SwiftUI
 struct PostsView: View {
 
     let barTitle = "Blog App"
+    private let screenTitle = "Lista de Posts"
 
     let posts = [
         Post(title: "titulo 1", date: "01/01/2001", details: "detalhes 1"),
@@ -27,7 +28,7 @@ struct PostsView: View {
                         .frame(height: 0)
                         .background(Color("dti-color"))
 
-                    Text("Lista de Posts")
+                    Text(screenTitle)
                     List {
                         ForEach(posts, id: \.id) { post in
                             VStack(alignment: .leading) {
@@ -39,7 +40,7 @@ struct PostsView: View {
                     }
 
 
-                    //                    Spacer()
+//                    Spacer()
 
                     Button("Novo post") {
                         print("novo")

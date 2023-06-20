@@ -9,9 +9,10 @@ import SwiftUI
 
 struct DetailsView: View {
 
-    let barTitle = "Blog App"
-
+    private let barTitle = PostsView().barTitle
+    private let screenTitle = "Detalhes do Post"
     let post = Post(title: "como ", date: "01/01/2001", details: "como ")
+    // MOCK
 
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct DetailsView: View {
                         .frame(height: 0)
                         .background(Color("dti-color"))
 
-                    Text("Detalhes do Post")
+                    Text(screenTitle)
                         .padding(8)
 
                     ScrollView {
@@ -47,9 +48,6 @@ struct DetailsView: View {
                     }
                     .border(.blue)
                     .padding()
-                    .frame(minWidth: .zero)
-
-                    Spacer()
 
                     Button("Excluir post") {
                         print("novo")
