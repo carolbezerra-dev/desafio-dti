@@ -29,19 +29,22 @@ struct PostsView: View {
                         .background(Color("dti-color"))
 
                     Text(screenTitle)
+
                     List {
                         ForEach(posts, id: \.id) { post in
-                            VStack(alignment: .leading) {
-                                Text(post.title)
-                                post.date
+                            NavigationLink {
+                                DetailsView(post: post)
+                            } label: {
+                                VStack(alignment: .leading) {
+                                    Text(post.title)
+                                    post.date
+                                }
                             }
                         }
                     }
 
-//                    Spacer()
-
-                    Button {
-                        //TODO: ação para adicionar
+                    NavigationLink {
+                        AddPostView()
                     } label: {
                         Image(systemName: "plus.rectangle.fill")
                             .font(.system(size: 33))
@@ -49,9 +52,8 @@ struct PostsView: View {
                     }
                     .padding([.top], 2)
                 }
-                .navigationBarTitle(barTitle, displayMode: .inline)
-
             }
+            .navigationBarTitle(barTitle, displayMode: .inline)
         }
     }
 }

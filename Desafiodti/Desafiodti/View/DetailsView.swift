@@ -11,8 +11,7 @@ struct DetailsView: View {
 
     private let barTitle = PostsView().barTitle
     private let screenTitle = "Detalhes do Post"
-    let post = Post(title: "como ", date: Text(Date.now, style: .date), details: "como ")
-    // MOCK
+    let post: Post
 
     var body: some View {
         NavigationView {
@@ -46,7 +45,7 @@ struct DetailsView: View {
                         .padding(15)
 
                     }
-                    .border(.blue)
+                    .border(Color("dti-roxo"))
                     .padding()
 
                     Button {
@@ -69,7 +68,14 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView()
-            .environment(\.locale, Locale(identifier: "pt"))
+        DetailsView(
+            post:
+                Post(
+                    title: "DetailsView",
+                    date: Text(Date.now, style: .date),
+                    details: "DetailsView_Preview"
+                )
+        )
+        .environment(\.locale, Locale(identifier: "pt"))
     }
 }
