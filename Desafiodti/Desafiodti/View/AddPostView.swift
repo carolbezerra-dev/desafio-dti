@@ -27,23 +27,34 @@ struct AddPostView: View {
                         .padding(8)
 
                     VStack(spacing: 30) {
-                        TextField("Título do post", text: $title)
+                        TextField("Título", text: $title)
                             .padding(6)
-                            .border(.blue)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color("dti-roxo"), lineWidth: 1)
+                            )
 
-                        TextField("Descrição do post", text: $description, axis: .vertical)
+                        TextField("Descrição", text: $description, axis: .vertical)
                             .padding(6)
                             .lineLimit(10, reservesSpace: true)
-                            .border(.red)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color("dti-roxo"), lineWidth: 1)
+                            )
                     }
                     .padding([.top], 30)
                     .padding([.leading, .trailing], 30)
 
                     Spacer()
 
-                    Button("Adicionar post") {
-                        print("novo")
+                    Button {
+                        //TODO: ação para adicionar
+                    } label: {
+                        Image(systemName: "plus.rectangle.fill")
+                            .font(.system(size: 35))
+                            .tint(Color("dti-blue"))
                     }
+                    .padding([.top], 2)
                 }
                 .navigationBarTitle(barTitle, displayMode: .inline)
 

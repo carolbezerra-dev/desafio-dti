@@ -13,11 +13,11 @@ struct PostsView: View {
     private let screenTitle = "Lista de Posts"
 
     let posts = [
-        Post(title: "titulo 1", date: "01/01/2001", details: "detalhes 1"),
-        Post(title: "titulo 2", date: "02/02/2012", details: "detalhes 2"),
-        Post(title: "titulo 3", date: "03/03/2023", details: "detalhes 3"),
-        Post(title: "titulo 4", date: "04/04/2004", details: "detalhes 4"),
-        Post(title: "titulo 5", date: "05/05/2015", details: "detalhes 5")
+        Post(title: "titulo 1", date: Text(Date.now, style: .date), details: "detalhes 1"),
+        Post(title: "titulo 2", date: Text(Date.now, style: .date), details: "detalhes 2"),
+        Post(title: "titulo 3", date: Text(Date.now, style: .date), details: "detalhes 3"),
+        Post(title: "titulo 4", date: Text(Date.now, style: .date), details: "detalhes 4"),
+        Post(title: "titulo 5", date: Text(Date.now, style: .date), details: "detalhes 5")
     ]
 
     var body: some View {
@@ -33,18 +33,21 @@ struct PostsView: View {
                         ForEach(posts, id: \.id) { post in
                             VStack(alignment: .leading) {
                                 Text(post.title)
-                                Text(post.date)
-
+                                post.date
                             }
                         }
                     }
 
-
 //                    Spacer()
 
-                    Button("Novo post") {
-                        print("novo")
+                    Button {
+                        //TODO: ação para adicionar
+                    } label: {
+                        Image(systemName: "plus.rectangle.fill")
+                            .font(.system(size: 33))
+                            .tint(Color("dti-blue"))
                     }
+                    .padding([.top], 2)
                 }
                 .navigationBarTitle(barTitle, displayMode: .inline)
 
@@ -56,5 +59,6 @@ struct PostsView: View {
 struct PostsView_Previews: PreviewProvider {
     static var previews: some View {
         PostsView()
+            .environment(\.locale, Locale(identifier: "pt"))
     }
 }

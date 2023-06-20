@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Post {
     let id = UUID()
     let title: String
-    let date: String // TODO: tem que ser do tipo Date
+    let date: Text
     let details: String
 }

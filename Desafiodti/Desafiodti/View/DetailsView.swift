@@ -11,7 +11,7 @@ struct DetailsView: View {
 
     private let barTitle = PostsView().barTitle
     private let screenTitle = "Detalhes do Post"
-    let post = Post(title: "como ", date: "01/01/2001", details: "como ")
+    let post = Post(title: "como ", date: Text(Date.now, style: .date), details: "como ")
     // MOCK
 
     var body: some View {
@@ -33,7 +33,7 @@ struct DetailsView: View {
                             Spacer(minLength: 20)
 
                             Text("Data").bold()
-                            Text(post.date)
+                            post.date
 
                             Spacer(minLength: 20)
 
@@ -49,12 +49,19 @@ struct DetailsView: View {
                     .border(.blue)
                     .padding()
 
-                    Button("Excluir post") {
-                        print("novo")
+                    Button {
+                        //TODO: ação para excluir
+                    } label: {
+                        Image(systemName: "trash.fill")
+                            .padding(8)
+                            .font(.system(size: 25))
+                            .foregroundColor(.white)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10).fill(.red)
+                            )
                     }
                 }
                 .navigationBarTitle(barTitle, displayMode: .inline)
-
             }
         }
     }
@@ -63,5 +70,6 @@ struct DetailsView: View {
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         DetailsView()
+            .environment(\.locale, Locale(identifier: "pt"))
     }
 }
