@@ -13,3 +13,14 @@ struct Post: Codable {
     let title: String
     let details: String
 }
+
+struct BrazilianFormatDate {
+    func today() -> String {
+        let date = Date.now
+        let formatter = DateFormatter()
+
+        formatter.dateFormat = "dd/MM/YYYY"
+
+        return formatter.string(from: date)
+    }
+}

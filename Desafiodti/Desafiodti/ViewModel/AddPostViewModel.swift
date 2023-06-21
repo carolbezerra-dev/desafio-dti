@@ -18,20 +18,11 @@ class AddPostViewModel: ObservableObject {
         posts = savedPosts
     }
 
-    func formateDate() -> String {
-        let date = Date.now
-        let formatter = DateFormatter()
+    func addNew(_ postTitle: String, _ postDetails: String) {
+        let today = BrazilianFormatDate().today()
 
-        formatter.dateFormat = "dd/MM/YYYY"
-
-        return formatter.string(from: date)
-    }
-
-    func addNew(postTitle: String, postDetail: String) {
-        let dateFormatted = formateDate()
-
-        if (postTitle != "" && postDetail != "") {
-            let new = Post(id: UUID(), date: dateFormatted, title: postTitle, details: postDetail)
+        if (postTitle != "" && postDetails != "") {
+            let new = Post(id: UUID(), date: today, title: postTitle, details: postDetails)
             posts.append(new)
             userDefaultsHelper.add(posts)
         }

@@ -22,6 +22,7 @@
 		876C7E2B2A4242E300EDE6DB /* UserDefaultsHelperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7E2A2A4242E300EDE6DB /* UserDefaultsHelperMock.swift */; };
 		87D287DF2A425B6400A01696 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D287DE2A425B6400A01696 /* PostsViewModel.swift */; };
 		87D287E02A426FF300A01696 /* AddPostViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C7DF82A4181EE00EDE6DB /* AddPostViewModelTests.swift */; };
+		87D287E42A43197500A01696 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D287E32A43197500A01696 /* PostsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		876C7E272A4225D000EDE6DB /* UserDefaultsHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelperProtocol.swift; sourceTree = "<group>"; };
 		876C7E2A2A4242E300EDE6DB /* UserDefaultsHelperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelperMock.swift; sourceTree = "<group>"; };
 		87D287DE2A425B6400A01696 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		87D287E32A43197500A01696 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				876C7E292A4242B600EDE6DB /* Mock */,
 				876C7DF82A4181EE00EDE6DB /* AddPostViewModelTests.swift */,
+				87D287E32A43197500A01696 /* PostsViewModelTests.swift */,
 			);
 			path = DesafiodtiTests;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D287E42A43197500A01696 /* PostsViewModelTests.swift in Sources */,
 				87D287E02A426FF300A01696 /* AddPostViewModelTests.swift in Sources */,
 				876C7E2B2A4242E300EDE6DB /* UserDefaultsHelperMock.swift in Sources */,
 			);

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DetailsView: View {
 
-    private let barTitle = PostsView().barTitle
     private let screenTitle = "Detalhes do Post"
     let post: Post
 
@@ -54,13 +53,13 @@ struct DetailsView: View {
                         Image(systemName: "trash.fill")
                             .padding(8)
                             .font(.system(size: 25))
-                            .foregroundColor(.white)
+                            .tint(.white)
                             .background(
                                 RoundedRectangle(cornerRadius: 10).fill(.red)
                             )
                     }
                 }
-                .navigationBarTitle(barTitle, displayMode: .inline)
+                .navigationBarTitle(PostsView().barTitle, displayMode: .inline)
             }
         }
     }
@@ -69,6 +68,5 @@ struct DetailsView: View {
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
         DetailsView(post: Post(id: UUID(), date: "20/06/2023", title: "Desafio dti", details: "Desenvolvedora Mobile iOS"))
-        .environment(\.locale, Locale(identifier: "pt"))
     }
 }

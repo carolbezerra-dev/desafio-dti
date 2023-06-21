@@ -28,13 +28,13 @@ struct UserDefaultsHelper: UserDefaultsHelperProtocol {
     }
 
     func get() -> [Post] {
-        if let list = userDefaults.data(forKey: "SavedPosts") {
+        if let posts = userDefaults.data(forKey: "SavedPosts") {
             do {
                 // Create JSON Decoder
                 let decoder = JSONDecoder()
 
                 // Decode posts
-                let data = try decoder.decode([Post].self, from: list)
+                let data = try decoder.decode([Post].self, from: posts)
 
                 return data
             } catch {
