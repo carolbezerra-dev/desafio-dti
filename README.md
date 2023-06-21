@@ -25,7 +25,7 @@ As cores escolhidas são as mesmas usadas na comunicação visual da dti (roxo, 
 
 | Home vazia |  Adicionar vazia | Adicionar preenchida |  Home com post |   Detalhes |
 |------------|-------------|------------|-------------|-------------|
-| <img src="./images/home-vazia.png" alt="Blog App Home vazia" width="200"/>  | <img src="./images/adicionar-post.png" alt="Blog App Adicionar post" width="200"/>  | <img src="../desafio-dti/images/adicionar-preenchida.png" alt="Blog App Adicionar preenchida" width="200"/>  | <img src="./images/home-com-post.png" alt="Blog App Home com post" width="200"/>  | <img src="./images/detalhes.png" alt="Blog App Detalhes do post" width="200"/>  |
+| <img src="./images/home-vazia.png" alt="Blog App Home vazia" width="200"/>  | <img src="./images/adicionar-post.png" alt="Blog App Adicionar post" width="200"/>  | <img src="./desafio-dti/images/adicionar-preenchida.png" alt="Blog App Adicionar preenchida" width="200"/>  | <img src="./images/home-com-post.png" alt="Blog App Home com post" width="200"/>  | <img src="./images/detalhes.png" alt="Blog App Detalhes do post" width="200"/>  |
   
 ## Caminho feliz do app
 
