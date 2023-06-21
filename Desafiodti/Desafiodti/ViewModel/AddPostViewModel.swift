@@ -9,14 +9,31 @@ import Foundation
 
 class AddPostViewModel: ObservableObject {
 
-    var postsViewModel = PostsViewModel()
+    private var userDefaultsHelper: UserDefaultsHelperProtocol
+    @Published private(set) var posts: [Post] = []
+
+    init(userDefaults: UserDefaultsHelperProtocol = UserDefaultsHelper()) {
+        self.userDefaultsHelper = userDefaults
+        let savedPosts = userDefaultsHelper.get()
+        posts = savedPosts
+    }
+
+    func formateDate() -> String {
+        let date = Date.now
+        let formatter = DateFormatter()
+
+        formatter.dateFormat = "dd/MM/YYYY"
+
+        return formatter.string(from: date)
+    }
 
     func addNew(postTitle: String, postDetail: String) {
+        let dateFormatted = formateDate()
+
         if (postTitle != "" && postDetail != "") {
-            postsViewModel.posts.append(Post(title: postTitle, details: postDetail))
-            postsViewModel.posts.append(Post(title: "Mock Add View Model", details: "Mock 2"))
-//            posts.append(Post(title: postTitle, details: postDetail))
-            print(postsViewModel.posts)
+            let new = Post(id: UUID(), date: dateFormatted, title: postTitle, details: postDetail)
+            posts.append(new)
+            userDefaultsHelper.add(posts)
         }
     }
 }

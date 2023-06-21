@@ -9,9 +9,10 @@ import SwiftUI
 
 struct PostsView: View {
 
-    @StateObject var postsViewModel = PostsViewModel()
     let barTitle = "Blog App"
     private let screenTitle = "Lista de Posts"
+    @StateObject private var postsViewModel = PostsViewModel()
+    @StateObject private var addPostViewModel = AddPostViewModel()
 
     var body: some View {
         NavigationView {
@@ -24,27 +25,49 @@ struct PostsView: View {
                     Text(screenTitle)
 
                     List {
-                        ForEach(postsViewModel.getPosts(), id: \.id) { post in
+                        ForEach(postsViewModel.posts, id: \.id) { post in
                             NavigationLink {
                                 DetailsView(post: post)
                             } label: {
                                 VStack(alignment: .leading) {
                                     Text(post.title)
-                                    post.date
+                                    Text(post.date)
                                 }
                             }
                         }
                     }
 
-                    NavigationLink {
-                        AddPostView()
-                    } label: {
-                        Image(systemName: "plus.rectangle.fill")
-                            .font(.system(size: 33))
-                            .tint(Color("dti-blue"))
+                    HStack {
+                        Button {
+                            postsViewModel.deleteAll()
+                        } label: {
+                            Text("Apagar tudo")
+                                .padding(5)
+                        }
+                        .font(.system(size: 15))
+                        .foregroundColor(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10).fill(.red)
+                        )
+
+                        NavigationLink {
+                            AddPostView()
+                        } label: {
+                            Text("Novo")
+                            Image(systemName: "plus.rectangle")
+                        }
+                        .padding(5)
+                        .font(.system(size: 15))
+                        .bold()
+                        .tint(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10).fill(Color("dti-blue"))
+                        )
                     }
-                    .padding([.top], 2)
                 }
+            }
+            .onAppear {
+                postsViewModel.get()
             }
             .navigationBarTitle(barTitle, displayMode: .inline)
         }

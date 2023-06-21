@@ -32,7 +32,7 @@ struct DetailsView: View {
                             Spacer(minLength: 20)
 
                             Text("Data").bold()
-                            post.date
+                            Text(post.date)
 
                             Spacer(minLength: 20)
 
@@ -49,7 +49,7 @@ struct DetailsView: View {
                     .padding()
 
                     Button {
-                        //TODO: ação para excluir
+                        // Não é necessário funcionalidade para deletar post específico
                     } label: {
                         Image(systemName: "trash.fill")
                             .padding(8)
@@ -68,13 +68,7 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(
-            post:
-                Post(
-                    title: "DetailsView",
-                    details: "DetailsView_Preview"
-                )
-        )
+        DetailsView(post: Post(id: UUID(), date: "20/06/2023", title: "Desafio dti", details: "Desenvolvedora Mobile iOS"))
         .environment(\.locale, Locale(identifier: "pt"))
     }
 }

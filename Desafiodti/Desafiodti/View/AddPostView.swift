@@ -9,9 +9,9 @@ import SwiftUI
 
 struct AddPostView: View {
 
-    @State private var title: String = ""
-    @State private var detail: String = ""
-    @StateObject var addPostViewModel = AddPostViewModel()
+    @State private var postTitle: String = ""
+    @State private var postDetail: String = ""
+    @StateObject private var addPostViewModel = AddPostViewModel()
 
     private let barTitle = PostsView().barTitle
     private let screenTitle = "Adicionar Post"
@@ -28,14 +28,14 @@ struct AddPostView: View {
                         .padding(8)
 
                     VStack(spacing: 30) {
-                        TextField("Título", text: $title)
+                        TextField("Título", text: $postTitle)
                             .padding(6)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color("dti-roxo"), lineWidth: 1)
                             )
 
-                        TextField("Escreva aqui seu post", text: $detail, axis: .vertical)
+                        TextField("Escreva aqui seu post", text: $postDetail, axis: .vertical)
                             .padding(6)
                             .lineLimit(10, reservesSpace: true)
                             .overlay(
@@ -49,13 +49,18 @@ struct AddPostView: View {
                     Spacer()
 
                     Button {
-                        addPostViewModel.addNew(postTitle: title, postDetail: detail)
+                        addPostViewModel.addNew(postTitle: postTitle, postDetail: postDetail)
                     } label: {
-                        Image(systemName: "plus.rectangle.fill")
-                            .font(.system(size: 35))
-                            .tint(Color("dti-blue"))
+                        Text("Adicionar")
+                        Image(systemName: "plus.rectangle")
                     }
-                    .padding([.top], 2)
+                    .padding(5)
+                    .font(.system(size: 15))
+                    .bold()
+                    .tint(.white)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10).fill(Color("dti-blue"))
+                    )
                 }
                 .navigationBarTitle(barTitle, displayMode: .inline)
             }

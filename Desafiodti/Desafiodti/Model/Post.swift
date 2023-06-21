@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import SwiftUI
 
-struct Post {
-    let id = UUID()
+struct Post: Codable {
+    let id: UUID
+    let date: String
     let title: String
-    let date = Text(Date.now, style: .date)
     let details: String
 }
