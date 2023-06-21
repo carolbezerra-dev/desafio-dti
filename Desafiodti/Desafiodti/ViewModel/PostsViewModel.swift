@@ -19,6 +19,7 @@ class PostsViewModel: ObservableObject {
 
     func get() {
         posts = userDefaultsHelper.get()
+        APIFetchHandler.sharedInstance.fetchAPIData()
     }
 
     func deleteAll() {

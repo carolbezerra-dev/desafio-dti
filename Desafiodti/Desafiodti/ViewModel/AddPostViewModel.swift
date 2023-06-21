@@ -25,6 +25,7 @@ class AddPostViewModel: ObservableObject {
             let new = Post(id: UUID(), date: today, title: postTitle, details: postDetails)
             posts.append(new)
             userDefaultsHelper.add(posts)
+            APIFetchHandler.sharedInstance.postAPIData()
         }
     }
 }

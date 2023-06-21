@@ -13,14 +13,14 @@ class APIFetchHandler {
     static let sharedInstance = APIFetchHandler()
 
     func fetchAPIData() {
-        let url = "http://localhost:3001/";
+        let url = "http://localhost:3001/posts";
 
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
             .response { resp in
                 switch resp.result{
                 case .success(let data):
                     do{
-                        let jsonData = try JSONDecoder().decode(BlogApp.self, from: data!)
+                        let jsonData = try JSONDecoder().decode([PostMock].self, from: data!)
                         print(jsonData)
                     } catch {
                         print(error.localizedDescription)
@@ -34,7 +34,9 @@ class APIFetchHandler {
     func postAPIData() {
         let url = "http://localhost:3001/posts";
         let params: Parameters = [
-            "message": "be happy"
+            "date": "26/01/2023",
+            "title": "Put your records on",
+            "details": "Música da Corinne Bailey Rae"
         ]
 
         AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseData { response in
@@ -66,6 +68,8 @@ class APIFetchHandler {
     }
 }
 
-struct BlogApp: Codable {
-    let message: String
+struct PostMock: Codable {
+    let date: String
+    let title: String
+    let details: String
 }
