@@ -1,0 +1,6 @@
+framework module Pods_Desafiodti {
+  umbrella header "Pods-Desafiodti-umbrella.h"
+
+  export *
+  module * { export * }
+}
