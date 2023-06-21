@@ -116,7 +116,7 @@
 				876C7E142A4187FE00EDE6DB /* Model */,
 				876C7E112A41828200EDE6DB /* View */,
 				876C7E1B2A42075D00EDE6DB /* ViewModel */,
-				876C7E242A421AF100EDE6DB /* Service */,
+				87D287E62A432D7600A01696 /* UserDefaults */,
 				876C7DEB2A4181ED00EDE6DB /* Assets.xcassets */,
 				876C7DED2A4181ED00EDE6DB /* Preview Content */,
 			);
@@ -177,21 +177,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		876C7E242A421AF100EDE6DB /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				876C7E252A4225A900EDE6DB /* UserDefaultsHelper.swift */,
-				876C7E272A4225D000EDE6DB /* UserDefaultsHelperProtocol.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		876C7E292A4242B600EDE6DB /* Mock */ = {
 			isa = PBXGroup;
 			children = (
 				876C7E2A2A4242E300EDE6DB /* UserDefaultsHelperMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		87D287E62A432D7600A01696 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				876C7E252A4225A900EDE6DB /* UserDefaultsHelper.swift */,
+				876C7E272A4225D000EDE6DB /* UserDefaultsHelperProtocol.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
