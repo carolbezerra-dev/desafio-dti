@@ -14,7 +14,7 @@ Xcode 14.2
 iOS 16.2  
 Simulador iPhone 14 Pro
 
-### Abordagem, arquitetura e Persistência
+### Abordagem, arquitetura e persistência
 SwiftUI, MVVM e UserDefaults (adicionar, listar e remover)
 
 Fiz a escolha me baseando no que tenho mais familiaridade, assim consegui entregar aplicação em tempo hábil, cumprindo o máximo de requisitos e dando atenção também aos bônus
@@ -29,7 +29,7 @@ As cores escolhidas são as mesmas usadas na comunicação visual da dti (roxo, 
 
 | Home vazia |  Adicionar vazia | Adicionar preenchida |  Home com post |   Detalhes |
 |------------|-------------|------------|-------------|-------------|
-| <img src="./images/home-vazia.png" alt="Blog App Home vazia" width="200"/>  | <img src="./images/adicionar-post.png" alt="Blog App Adicionar post" width="200"/>  | <img src="./images/adicionar-preenchida.png" alt="Blog App Adicionar preenchida" width="200"/>  | <img src="./images/home-com-post.png" alt="Blog App Home com post" width="200"/>  | <img src="./images/detalhes.png" alt="Blog App Detalhes do post" width="200"/>  |
+| <img src="./images/home-vazia.png" alt="Blog App Home vazia" width="190"/>  | <img src="./images/adicionar-post.png" alt="Blog App Adicionar post" width="190"/>  | <img src="./images/adicionar-preenchida.png" alt="Blog App Adicionar preenchida" width="190"/>  | <img src="./images/home-com-post.png" alt="Blog App Home com post" width="190"/>  | <img src="./images/detalhes.png" alt="Blog App Detalhes do post" width="190"/>  |
   
 ## Caminho feliz do app
 
@@ -57,7 +57,7 @@ não é possível adicionar post cujo campos de título e/ou descrição estajam
 
 | Comportamento |
 |------------|
-| <img src="./images/app-gif.gif" alt="Blog App Gif mostrando compartamento do app" width="200"/> |
+| <img src="./images/app-gif.gif" alt="Blog App Gif mostrando compartamento do app" width="190"/> |
 
 # Bônus (extra)
 
