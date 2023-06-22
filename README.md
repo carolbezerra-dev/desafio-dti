@@ -125,5 +125,5 @@ Estão sendo trigadas durante a aplicação através da ViewModel:
 ## Considerações finais
 Excelente proposta de desafio!  
 Foi possível aplicar vários dos meus conhecimentos, ao mesmo tempo pude aprender novas abordagens também. Fiquei muito feliz em realizá-lo  
-Certamente é algo que quero ter no meu portfólio  
-Espero que goste e me coloco [à disposição](https://www.linkedin.com/in/carolbezerra-dev/) para dúvidas e/ou sugestões de melhoria (sempre bem-vendas)
+Certamente é algo que quero ter no meu portfólio.  
+Espero que goste e me coloco [à disposição](https://www.linkedin.com/in/carolbezerra-dev/) para dúvidas e/ou sugestões de melhoria (sempre bem-vindas).
