@@ -32,13 +32,13 @@ app.get('/posts', (req, res) => res.status(200).json([
             details: 'Música de Beth Carvalho'
             }
         ])
-    );
+    )
 
 app.post('/posts', (req, res) => {
-    const newTeam = { ...req.body };
-    posts.push(newTeam);
+    const newPost = { ...req.body };
+    posts.push(newPost);
   
-    res.status(201).json({ team: newTeam });
+    res.status(201).json({ post: newPost });
   });
 
 

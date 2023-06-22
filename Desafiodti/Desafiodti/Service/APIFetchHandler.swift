@@ -11,9 +11,9 @@ import Alamofire
 class APIFetchHandler {
 
     static let sharedInstance = APIFetchHandler()
+    let url = "http://localhost:3001/posts";
 
     func fetchAPIData() {
-        let url = "http://localhost:3001/posts";
 
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil)
             .response { resp in
@@ -32,7 +32,6 @@ class APIFetchHandler {
     }
 
     func postAPIData() {
-        let url = "http://localhost:3001/posts";
         let params: Parameters = [
             "date": "26/01/2023",
             "title": "Put your records on",
